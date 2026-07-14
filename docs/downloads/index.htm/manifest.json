@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Cuelet - 解读图片含义",
+  "short_name": "Cuelet Meaning",
+  "version": "1.0.0",
+  "description": "从构图、色彩、光线、材质、主体关系和视觉符号解读网页图片可能表达的观念、情绪与美学语言。",
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": {
+    "default_title": "Cuelet - 解读图片含义",
+    "default_popup": "popup/popup.html",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "options_page": "options/options.html",
+  "commands": {
+    "pick-image-meaning": {
+      "suggested_key": { "default": "Ctrl+Shift+M", "mac": "Command+Shift+M" },
+      "description": "选取图片解读含义"
+    }
+  },
+  "permissions": ["contextMenus", "scripting", "storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "web_accessible_resources": [{ "resources": ["welcome.html"], "matches": ["<all_urls>"] }]
+}
